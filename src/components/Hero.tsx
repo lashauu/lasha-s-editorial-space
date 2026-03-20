@@ -4,7 +4,7 @@ const Hero = () => {
       <div className="container max-w-5xl">
         <div className="space-y-8">
           <h1
-            className="text-[clamp(2.5rem,8vw,7rem)] font-black uppercase leading-[0.9] tracking-tight opacity-0 animate-fade-up"
+            className="text-[clamp(2.5rem,8vw,7rem)] font-black uppercase leading-[0.9] tracking-tight text-accent-blue opacity-0 animate-fade-up"
             style={{ animationDelay: "0.1s" }}
           >
             Lasha
