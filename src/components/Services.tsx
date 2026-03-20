@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const valueBullets = [
-  "Build brands that scale with your business",
-  "Create design systems that keep your marketing consistent",
-  "Turn complex products into clear, usable interfaces",
-  "Support growth with design that performs, not just looks good",
+  "Build brands that scale with your business and leave a lasting impression",
+  "Create design systems that keep your marketing consistent across every channel",
+  "Turn complex products into clear, usable interfaces that people actually enjoy using",
+  "Support growth with design that performs, converts, and not just looks good",
 ];
 
 const services = [
