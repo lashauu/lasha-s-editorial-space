@@ -76,9 +76,7 @@ const Services = () => {
           {valueBullets.map((bullet, i) => (
             <ScrollReveal key={i} delay={i * 80}>
               <div className="flex items-start gap-4 py-4 border-t border-border">
-                <svg className="w-2.5 h-2.5 mt-1.5 shrink-0 text-accent-blue" viewBox="0 0 10 10" fill="currentColor">
-                  <path d="M5 0L5.8 4.2L10 5L5.8 5.8L5 10L4.2 5.8L0 5L4.2 4.2Z" />
-                </svg>
+                <span className="w-8 h-px bg-accent-blue mt-2.5 shrink-0" />
                 <p className="text-sm md:text-base leading-relaxed">{bullet}</p>
               </div>
             </ScrollReveal>
