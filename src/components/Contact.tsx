@@ -1,22 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 
 const socialLinks = [
-  { label: "Behance", href: "https://www.behance.net/lasha_u" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/lasha-u/" },
-  { label: "X", href: "https://x.com/lasha_uu" },
-  { label: "Instagram", href: "https://www.instagram.com/lasha_u/" },
-  { label: "Pinterest", href: "https://www.pinterest.com/lasha_u/" },
-  { label: "Soundcloud", href: "https://soundcloud.com/lasha_u" },
-];
+{ label: "Behance", href: "https://www.behance.net/lasha_u" },
+{ label: "LinkedIn", href: "https://www.linkedin.com/in/lasha-u/" },
+{ label: "X", href: "https://x.com/lasha_uu" },
+{ label: "Instagram", href: "https://www.instagram.com/lasha_u/" },
+{ label: "Pinterest", href: "https://www.pinterest.com/lasha_u/" },
+{ label: "Soundcloud", href: "https://soundcloud.com/lasha_u" }];
 
-const ScrollReveal = ({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => {
+
+const ScrollReveal = ({ children, className = "", delay = 0 }: {children: React.ReactNode;className?: string;delay?: number;}) => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); observer.unobserve(el); } },
+      ([entry]) => {if (entry.isIntersecting) {setVisible(true);observer.unobserve(el);}},
       { threshold: 0.15 }
     );
     observer.observe(el);
@@ -26,11 +26,11 @@ const ScrollReveal = ({ children, className = "", delay = 0 }: { children: React
     <div
       ref={ref}
       className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0 blur-0" : "opacity-0 translate-y-5 blur-[4px]"} ${className}`}
-      style={{ transitionDelay: `${delay}ms`, transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}
-    >
+      style={{ transitionDelay: `${delay}ms`, transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)" }}>
+      
       {children}
-    </div>
-  );
+    </div>);
+
 };
 
 const Contact = () => {
@@ -45,60 +45,47 @@ const Contact = () => {
 
         <ScrollReveal delay={100}>
           <p className="max-w-xl text-muted-foreground leading-relaxed mb-10 text-sm md:text-base">
-            Have a project in mind or want to talk design? I'm open to freelance
-            work, collaborations, and full-time opportunities.
+            Have a project in mind or want to talk design? I'm open to freelance work or  collaborations.
+          
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={200}>
           <a
             href="mailto:hello@lashauchaneishvili.com"
-            className="inline-flex items-center gap-3 text-lg md:text-xl font-black hover:text-accent transition-colors duration-200 group"
-          >
+            className="inline-flex items-center gap-3 text-lg md:text-xl font-black hover:text-accent transition-colors duration-200 group">
+            
             hello@lashauchaneishvili.com
             <svg
               className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
               viewBox="0 0 16 16"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1.5"
-            >
+              strokeWidth="1.5">
+              
               <path d="M1 8h14M9 2l6 6-6 6" />
             </svg>
           </a>
         </ScrollReveal>
 
         <ScrollReveal delay={300}>
-          <div className="mt-16 mb-5 flex items-center gap-4">
-            <span className="text-xs font-black uppercase tracking-[0.25em] text-accent-blue">Connect with me</span>
-            <span className="flex-1 h-px bg-border" />
-          </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-3">
-            {socialLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors duration-200"
-              >
+          <div className="flex flex-wrap gap-x-6 gap-y-2 mt-12">
+            {socialLinks.map((link) =>
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-foreground after:transition-all after:duration-300 hover:after:w-full">
+              
                 {link.label}
-                <svg
-                  className="w-2.5 h-2.5 opacity-40 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path d="M3 9L9 3M9 3H4.5M9 3v4.5" />
-                </svg>
               </a>
-            ))}
+            )}
           </div>
         </ScrollReveal>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Contact;
