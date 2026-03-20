@@ -34,21 +34,8 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Gotham';
-  src: url('/fonts/gotham-ultra.otf') format('opentype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: 'Gotham';
-  src: url('/fonts/gotham-ultra-italic.otf') format('opentype');
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
+
 
 @layer base {
   :root {
