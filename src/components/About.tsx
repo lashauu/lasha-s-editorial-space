@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
+import lashaPhoto from "@/assets/lasha-photo.jpg";
 const ScrollReveal = ({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -31,10 +31,13 @@ const About = () => {
         <div className="md:grid md:grid-cols-12 md:gap-16">
           {/* Photo placeholder */}
           <ScrollReveal className="md:col-span-5 mb-12 md:mb-0">
-            <div className="aspect-[3/4] bg-muted flex items-end p-8">
-              <span className="text-xs uppercase tracking-widest text-muted-foreground">
-                Photo
-              </span>
+            <div className="aspect-[3/4] overflow-hidden">
+              <img
+                src={lashaPhoto}
+                alt="Lasha Uchaneishvili"
+                className="w-full h-full object-cover object-top"
+                loading="lazy"
+              />
             </div>
           </ScrollReveal>
 
