@@ -69,9 +69,10 @@ const Contact = () => {
         </ScrollReveal>
 
         <ScrollReveal delay={300}>
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mt-16 mb-5">
-            Connect with me
-          </p>
+          <div className="mt-16 mb-5 flex items-center gap-4">
+            <span className="text-xs font-black uppercase tracking-[0.25em] text-accent-blue">Connect with me</span>
+            <span className="flex-1 h-px bg-border" />
+          </div>
           <div className="flex flex-wrap gap-x-6 gap-y-3">
             {socialLinks.map((link) => (
               <a
