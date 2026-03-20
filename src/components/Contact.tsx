@@ -69,16 +69,27 @@ const Contact = () => {
         </ScrollReveal>
 
         <ScrollReveal delay={300}>
-          <div className="flex flex-wrap gap-x-6 gap-y-2 mt-12">
+          <div className="flex items-center gap-3 mt-14 mb-6">
+            <span className="text-[11px] uppercase tracking-[0.25em] text-accent-blue font-bold">Connect with me</span>
+            <span className="flex-1 h-px bg-border" />
+          </div>
+          <div className="flex flex-wrap gap-x-6 gap-y-3">
             {socialLinks.map((link) =>
             <a
               key={link.label}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-foreground after:transition-all after:duration-300 hover:after:w-full">
-              
+              className="group inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
                 {link.label}
+                <svg
+                  className="w-3 h-3 opacity-40 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5">
+                  <path d="M3 9L9 3M9 3H4.5M9 3v4.5" />
+                </svg>
               </a>
             )}
           </div>
