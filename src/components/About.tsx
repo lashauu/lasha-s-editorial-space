@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import lashaPhoto from "@/assets/lasha-photo.jpg";
+
 const ScrollReveal = ({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -26,17 +27,19 @@ const ScrollReveal = ({ children, className = "", delay = 0 }: { children: React
 
 const About = () => {
   return (
-    <section className="py-32 md:py-40 bg-secondary" id="about">
-      <div className="container max-w-5xl">
-        <div className="md:grid md:grid-cols-12 md:gap-16">
-          {/* Photo placeholder */}
-          <ScrollReveal className="md:col-span-5 mb-12 md:mb-0">
-            <div className="aspect-[3/4] overflow-hidden">
+    <section className="py-24 md:py-40 bg-secondary" id="about" aria-label="About Lasha Uchaneishvili">
+      <div className="container max-w-5xl px-5 sm:px-6">
+        <div className="md:grid md:grid-cols-12 md:gap-12 lg:gap-16">
+          {/* Photo */}
+          <ScrollReveal className="md:col-span-5 mb-10 md:mb-0">
+            <div className="aspect-[3/4] overflow-hidden max-w-sm md:max-w-none mx-auto md:mx-0">
               <img
                 src={lashaPhoto}
-                alt="Lasha Uchaneishvili"
+                alt="Lasha Uchaneishvili — Art Director and Graphic Designer based in Tbilisi, Georgia"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"
+                width="600"
+                height="800"
               />
             </div>
           </ScrollReveal>
@@ -44,18 +47,18 @@ const About = () => {
           {/* Text */}
           <div className="md:col-span-7">
             <ScrollReveal delay={100}>
-              <p className="text-accent-blue text-xs font-black uppercase tracking-[0.2em] mb-6">
+              <p className="text-accent-blue text-[11px] sm:text-xs font-black uppercase tracking-[0.2em] mb-5 md:mb-6">
                 Graphic Designer. Visual Thinker. Problem Solver.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-10">
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-8 md:mb-10">
                 About
               </h2>
             </ScrollReveal>
 
-            <div className="space-y-5 text-muted-foreground leading-relaxed text-sm md:text-base">
+            <div className="space-y-4 md:space-y-5 text-muted-foreground leading-relaxed text-sm md:text-base">
               <ScrollReveal delay={280}>
                 <p>
                   Art Director & Graphic Designer based in Tbilisi, Georgia, specializing in branding, visual identity, and art direction. My work lies at the intersection of structure and emotion, rooted in mathematics, symmetry, and the quiet elegance of minimalism.
