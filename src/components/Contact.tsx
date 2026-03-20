@@ -38,7 +38,7 @@ const Contact = () => {
     <section className="py-32 md:py-40" id="contact">
       <div className="container max-w-5xl">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tight mb-8">
+          <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tight mb-8 text-accent-blue">
             Let's work together.
           </h2>
         </ScrollReveal>
