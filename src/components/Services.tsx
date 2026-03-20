@@ -72,10 +72,13 @@ const Services = () => {
         </ScrollReveal>
 
         {/* Value bullets */}
-        <div className="grid md:grid-cols-2 gap-6 mb-24">
+        <div className="grid md:grid-cols-2 gap-4 mb-24">
           {valueBullets.map((bullet, i) => (
             <ScrollReveal key={i} delay={i * 80}>
-              <div className="border border-border px-6 py-5 hover:border-accent-blue/40 transition-colors duration-300">
+              <div className="flex items-start gap-4 py-4 border-t border-border">
+                <svg className="w-3 h-3 mt-1.5 shrink-0 text-accent-blue" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M6 0l1.76 3.57L12 4.16 8.82 7.02l.94 4.98L6 9.8 2.24 12l.94-4.98L0 4.16l4.24-.59z" />
+                </svg>
                 <p className="text-sm md:text-base leading-relaxed">{bullet}</p>
               </div>
             </ScrollReveal>
