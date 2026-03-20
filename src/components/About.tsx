@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
+import lashaPhoto from "@/assets/lasha-photo.jpg";
 const ScrollReveal = ({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
