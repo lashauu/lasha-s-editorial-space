@@ -41,7 +41,7 @@ const CustomCursor = () => {
       pos.current.y += (target.current.y - pos.current.y) * ease;
 
       if (cursor) {
-        cursor.style.transform = `translate3d(${pos.current.x - 20}px, ${pos.current.y - 20}px, 0)`;
+        cursor.style.transform = `translate3d(${pos.current.x - 12}px, ${pos.current.y - 12}px, 0)`;
       }
 
       rafId.current = requestAnimationFrame(animate);
@@ -66,10 +66,10 @@ const CustomCursor = () => {
       ref={cursorRef}
       className="pointer-events-none fixed top-0 left-0 z-[9999] hidden md:block"
       style={{
-        width: 40,
-        height: 40,
+        width: 24,
+        height: 24,
         borderRadius: "50%",
-        border: "2px solid hsl(var(--accent))",
+        backgroundColor: "hsl(var(--accent))",
         opacity: 0,
         willChange: "transform",
         transition: "opacity 0.3s ease",
