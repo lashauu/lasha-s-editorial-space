@@ -41,7 +41,7 @@ const CustomCursor = () => {
       pos.current.y += (target.current.y - pos.current.y) * ease;
 
       if (cursor) {
-        cursor.style.transform = `translate3d(${pos.current.x - 20}px, ${pos.current.y - 20}px, 0)`;
+        cursor.style.transform = `translate3d(${pos.current.x - 12}px, ${pos.current.y - 12}px, 0)`;
       }
 
       rafId.current = requestAnimationFrame(animate);
