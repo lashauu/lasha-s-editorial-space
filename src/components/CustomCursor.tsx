@@ -35,9 +35,8 @@ const CustomCursor = () => {
     };
 
     const animate = () => {
-      const ease = 0.15;
-      pos.current.x += (target.current.x - pos.current.x) * ease;
-      pos.current.y += (target.current.y - pos.current.y) * ease;
+      pos.current.x += (target.current.x - pos.current.x) * 0.35;
+      pos.current.y += (target.current.y - pos.current.y) * 0.35;
 
       if (cursor) {
         cursor.style.transform = `translate3d(${pos.current.x - 12}px, ${pos.current.y - 12}px, 0)`;
