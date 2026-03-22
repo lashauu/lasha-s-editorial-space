@@ -8,7 +8,6 @@ const CustomCursor = () => {
   const visible = useRef(false);
 
   useEffect(() => {
-    // Skip on touch devices
     if ("ontouchstart" in window) return;
 
     const cursor = cursorRef.current;
@@ -19,7 +18,7 @@ const CustomCursor = () => {
       target.current.y = e.clientY;
       if (!visible.current) {
         visible.current = true;
-        cursor.style.opacity = "1";
+        cursor.style.opacity = "0.85";
         pos.current.x = e.clientX;
         pos.current.y = e.clientY;
       }
@@ -32,7 +31,7 @@ const CustomCursor = () => {
 
     const onMouseEnter = () => {
       visible.current = true;
-      cursor.style.opacity = "1";
+      cursor.style.opacity = "0.85";
     };
 
     const animate = () => {
@@ -60,7 +59,6 @@ const CustomCursor = () => {
     };
   }, []);
 
-  // Hide on touch devices via CSS too
   return (
     <div
       ref={cursorRef}
@@ -69,8 +67,8 @@ const CustomCursor = () => {
         width: 24,
         height: 24,
         borderRadius: "50%",
-        backgroundColor: "hsl(var(--accent))",
-        mixBlendMode: "exclusion",
+        backgroundColor: "hsl(216, 61%, 47%)",
+        mixBlendMode: "multiply",
         opacity: 0,
         willChange: "transform",
         transition: "opacity 0.3s ease",
