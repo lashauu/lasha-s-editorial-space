@@ -70,7 +70,7 @@ const CustomCursor = () => {
         height: 24,
         borderRadius: "50%",
         backgroundColor: "hsl(var(--accent))",
-        mixBlendMode: "difference",
+        mixBlendMode: "exclusion",
         opacity: 0,
         willChange: "transform",
         transition: "opacity 0.3s ease",
